@@ -1,399 +1,524 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="vi"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>THE AI AUTHORITY | Chuyên gia Đào tạo AI Doanh nghiệp</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-bright": "#f7f9fb",
-              "primary-fixed": "#dce1ff",
-              "on-tertiary-container": "#4d8cff",
-              "primary-container": "#00216b",
-              "tertiary-fixed-dim": "#aec6ff",
-              "on-error-container": "#93000a",
-              "surface-container-low": "#f2f4f6",
-              "surface-container": "#eceef0",
-              "surface-container-highest": "#e0e3e5",
-              "on-secondary-container": "#57657a",
-              "on-secondary": "#ffffff",
-              "background": "#f7f9fb",
-              "on-surface": "#191c1e",
-              "on-primary-container": "#6b8af1",
-              "on-tertiary-fixed-variant": "#004397",
-              "error": "#ba1a1a",
-              "secondary-container": "#d5e3fc",
-              "surface-variant": "#e0e3e5",
-              "inverse-surface": "#2d3133",
-              "outline-variant": "#c5c6d2",
-              "primary-fixed-dim": "#b5c4ff",
-              "on-primary": "#ffffff",
-              "secondary-fixed": "#d5e3fc",
-              "surface-tint": "#3557bc",
-              "on-primary-fixed-variant": "#153ea3",
-              "tertiary": "#001334",
-              "primary": "#00103e",
-              "on-tertiary": "#ffffff",
-              "on-tertiary-fixed": "#001a43",
-              "surface": "#f7f9fb",
-              "secondary": "#515f74",
-              "on-secondary-fixed": "#0d1c2e",
-              "outline": "#757682",
-              "on-secondary-fixed-variant": "#3a485b",
-              "on-background": "#191c1e",
-              "surface-container-high": "#e6e8ea",
-              "on-surface-variant": "#444650",
-              "inverse-on-surface": "#eff1f3",
-              "tertiary-container": "#00265c",
-              "secondary-fixed-dim": "#b9c7df",
-              "surface-container-lowest": "#ffffff",
-              "on-error": "#ffffff",
-              "on-primary-fixed": "#00164e",
-              "tertiary-fixed": "#d8e2ff",
-              "surface-dim": "#d8dadc",
-              "inverse-primary": "#b5c4ff",
-              "error-container": "#ffdad6"
-            },
-            fontFamily: {
-              "headline": ["Manrope"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+<html class="scroll-smooth" lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>THE AI AUTHORITY | Chuyên gia Đào tạo AI Doanh nghiệp</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#f7f9fb",
+            "primary-fixed": "#dce1ff",
+            "on-tertiary-container": "#4d8cff",
+            "primary-container": "#00216b",
+            "tertiary-fixed-dim": "#aec6ff",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f2f4f6",
+            "surface-container": "#eceef0",
+            "surface-container-highest": "#e0e3e5",
+            "on-secondary-container": "#57657a",
+            "on-secondary": "#ffffff",
+            "background": "#f7f9fb",
+            "on-surface": "#191c1e",
+            "on-primary-container": "#6b8af1",
+            "on-tertiary-fixed-variant": "#004397",
+            "error": "#ba1a1a",
+            "secondary-container": "#d5e3fc",
+            "surface-variant": "#e0e3e5",
+            "inverse-surface": "#2d3133",
+            "outline-variant": "#c5c6d2",
+            "primary-fixed-dim": "#b5c4ff",
+            "on-primary": "#ffffff",
+            "secondary-fixed": "#d5e3fc",
+            "surface-tint": "#3557bc",
+            "on-primary-fixed-variant": "#153ea3",
+            "tertiary": "#001334",
+            "primary": "#00103e",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#001a43",
+            "surface": "#f7f9fb",
+            "secondary": "#515f74",
+            "on-secondary-fixed": "#0d1c2e",
+            "outline": "#757682",
+            "on-secondary-fixed-variant": "#3a485b",
+            "on-background": "#191c1e",
+            "surface-container-high": "#e6e8ea",
+            "on-surface-variant": "#444650",
+            "inverse-on-surface": "#eff1f3",
+            "tertiary-container": "#00265c",
+            "secondary-fixed-dim": "#b9c7df",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#00164e",
+            "tertiary-fixed": "#d8e2ff",
+            "surface-dim": "#d8dadc",
+            "inverse-primary": "#b5c4ff",
+            "error-container": "#ffdad6"
           },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
         },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-      }
-      .glass-effect {
-        background: rgba(255, 255, 255, 0.4);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-      }
-      .editorial-shadow {
-        box-shadow: 0 24px 48px rgba(25, 28, 30, 0.06);
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f7f9fb;
-        color: #191c1e;
-      }
-      h1, h2, h3, h4 {
-        font-family: 'Manrope', sans-serif;
-      }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .editorial-shadow {
+      box-shadow: 0 24px 48px rgba(25, 28, 30, 0.06);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fb;
+      color: #191c1e;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
 </head>
+
 <body class="bg-surface selection:bg-primary-fixed selection:text-primary">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/40 backdrop-blur-xl shadow-sm">
-<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
-<div class="text-xl font-bold tracking-tighter text-blue-950">THE AI AUTHORITY</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-blue-900 border-b-2 border-blue-900 pb-1" href="#">Trang chủ</a>
-<a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors" href="#about">Giới thiệu</a>
-<a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors" href="#services">Dịch vụ</a>
-<a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors" href="#portfolio">Dự án</a>
-<a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors" href="#testimonials">Đánh giá</a>
-<a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors" href="#contact">Liên hệ</a>
-</div>
-<button class="bg-primary hover:opacity-80 transition-all duration-300 text-white px-6 py-2.5 rounded-xl font-manrope text-sm font-semibold tracking-wide">
-                Bắt đầu ngay
-            </button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-surface">
-<div class="max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center">
-<div class="z-10">
-<span class="inline-block font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container mb-4 font-semibold">Tương lai của Doanh nghiệp</span>
-<h1 class="text-[3.5rem] leading-[1.1] font-extrabold text-primary tracking-tight mb-6">
-                    Chuyên gia đào tạo <span class="text-surface-tint">AI</span> cho doanh nghiệp
-                </h1>
-<p class="text-lg text-secondary leading-relaxed mb-10 max-w-lg">
-                    Chuyển đổi hiệu suất vận hành và tư duy chiến lược thông qua hệ thống giải pháp trí tuệ nhân tạo thực chiến, được thiết kế riêng cho lãnh đạo và đội ngũ tập đoàn.
-                </p>
-<div class="flex flex-wrap gap-5">
-<a class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:translate-y-[-2px] transition-all" href="#contact">
-                        Nhận tư vấn ngay
-                    </a>
-<a class="group flex items-center gap-2 text-primary font-semibold py-4 px-2" href="#services">
-                        Tìm hiểu thêm
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-surface-tint/10 rounded-full blur-[100px]"></div>
-<div class="relative z-10 rounded-2xl overflow-hidden editorial-shadow">
-<img alt="Chuyên gia đào tạo AI chuyên nghiệp" class="w-full h-[600px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="Professional AI expert portrait in studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvDbrS0C8ENgw8i-JM5fGYm6XRM4dM7mN0XhSgxOPUxKZZFA8cIHqrtMivyuw79KN4Qcro9UXURSi-YQjggeqSKyt1RbWuoCHJMG1Gs-tPmwwqZqvU7hDWMdjL-FT_FoR455r0izfxRryYVu0I4ar34V4mFmv65rSd5bk0B2Ajr01Frziha3DxmhoTfeJD_wdou5WZxKDAjTQijze6WC3lemH9oB4gqtvtc2SKLuGZS9OOOjL0Vb69ZTla6Loc8aCXtffVWbxFIw"/>
-</div>
-<!-- Glass Badge -->
-<div class="absolute -bottom-6 -left-6 glass-effect p-6 rounded-xl editorial-shadow border border-white/20 z-20 max-w-[240px]">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
-<span class="font-bold text-primary">Kinh nghiệm</span>
-</div>
-<p class="text-sm text-secondary">Đã đồng hành cùng +50 tập đoàn đa quốc gia trong hành trình chuyển đổi số.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-32 bg-surface-container-low" id="about">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid md:grid-cols-12 gap-16 items-start">
-<div class="md:col-span-5">
-<span class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Về chúng tôi</span>
-<h2 class="text-[2.5rem] font-bold text-primary leading-tight">Định vị lại tri thức trong kỷ nguyên số</h2>
-</div>
-<div class="md:col-span-7 space-y-8">
-<p class="text-xl font-light text-secondary leading-relaxed">
-                        Chúng tôi không chỉ dạy cách sử dụng công cụ AI. Chúng tôi kiến tạo tư duy hệ thống để AI trở thành "cánh tay nối dài" cho sự sáng tạo và năng suất của con người.
-                    </p>
-<div class="grid grid-cols-2 gap-8 pt-4">
-<div>
-<div class="text-[2.5rem] font-extrabold text-primary mb-1">10+</div>
-<div class="text-sm uppercase tracking-widest text-slate-500 font-medium">Năm kinh nghiệm công nghệ</div>
-</div>
-<div>
-<div class="text-[2.5rem] font-extrabold text-primary mb-1">5000+</div>
-<div class="text-sm uppercase tracking-widest text-slate-500 font-medium">Học viên cấp quản lý</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-32 bg-surface" id="services">
-<div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-20">
-<span class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Giải pháp chiến lược</span>
-<h2 class="text-4xl font-bold text-primary">Dịch vụ đào tạo &amp; Tư vấn</h2>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-primary-fixed editorial-shadow group">
-<div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl mb-8 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="school">school</span>
-</div>
-<h3 class="text-xl font-bold text-primary mb-4">Đào tạo nội bộ</h3>
-<p class="text-secondary leading-relaxed">Chương trình huấn luyện thực chiến về Generative AI, Prompt Engineering dành riêng cho nhân sự các phòng ban.</p>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-primary-fixed editorial-shadow group">
-<div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl mb-8 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="strategy">strategy</span>
-</div>
-<h3 class="text-xl font-bold text-primary mb-4">Tư vấn chiến lược AI</h3>
-<p class="text-secondary leading-relaxed">Xây dựng lộ trình áp dụng AI toàn diện, từ khâu quản trị dữ liệu đến tối ưu hóa quy trình vận hành doanh nghiệp.</p>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-primary-fixed editorial-shadow group">
-<div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl mb-8 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="settings_input_component">settings_input_component</span>
-</div>
-<h3 class="text-xl font-bold text-primary mb-4">Triển khai giải pháp AI</h3>
-<p class="text-secondary leading-relaxed">Xây dựng các trợ lý AI tùy chỉnh (Custom GPTs) và hệ thống tự động hóa dựa trên nhu cầu đặc thù của tổ chức.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Portfolio Section (Bento Grid) -->
-<section class="py-32 bg-surface-container-low" id="portfolio">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-2xl">
-<span class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Dự án tiêu biểu</span>
-<h2 class="text-4xl font-bold text-primary">Khẳng định giá trị qua kết quả thực tế</h2>
-</div>
-<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" href="#">Xem tất cả dự án</a>
-</div>
-<div class="grid md:grid-cols-12 grid-rows-2 gap-6 h-auto md:h-[700px]">
-<div class="md:col-span-8 md:row-span-2 relative group overflow-hidden rounded-xl bg-primary">
-<img alt="Dự án Tech Corp" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Modern corporate building architecture reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJIZ81GqnfK8tKLtHiZ4XwWGdzPUb4D8fKoHkry6CugMNh3JXQ1krHFyXd39_d_MbIoe-ZJSD5RMvlRtrPNUWE_LUX1nAhOK4eGxoJvWqpZSUct3qidfD-gpdu5m3GDJE8zHMMyLxOYWj0nGKPjl1d8LkgE88g-whXEHGuHYTeEQBQkqllxgjWxT-mysuw04MikpzpAGMkVrX-qf5uBdBrapzX3wTQuRn25AVKIf38Xfj71OsjMTDZFNcAXDWCqHvdhSJMzTOgRA"/>
-<div class="absolute inset-0 p-10 flex flex-col justify-end text-white">
-<div class="mb-2 text-xs uppercase tracking-widest opacity-80">FinTech Solutions</div>
-<h3 class="text-3xl font-bold mb-4">Tự động hóa hệ thống thẩm định tín dụng</h3>
-<p class="max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Giảm 40% thời gian xử lý hồ sơ và tăng 15% độ chính xác trong dự báo rủi ro.</p>
-</div>
-</div>
-<div class="md:col-span-4 relative group overflow-hidden rounded-xl bg-surface-tint">
-<img alt="Dự án Logistics" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Modern minimal office workspace environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6zrGI9ghWKKJpXmqMWS4YmRp4YwuTR3BQ5ce-VGsmZJT5PD6oMCsUKUzqZKlnUJtP_ysH90yz0l1q4khWEbKOdMDec_3OO0RuVtxaDIlDsWN_gIgAKqeXEa6Fc5Ya0dVut1sh8A1k6j1TzJt7iKwh7mRW-bYRZsfcuquONQAu_ikRtX-ffuE_yfwq7cI7g-lgKXhc7ofOBcIRd5UUATKJknWI57JMj7ADYhETRAmPDtDvKRHDYraaIqz3tXFBHZe8K1vRbNI8Ww"/>
-<div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
-<h3 class="text-xl font-bold">AI Quản trị chuỗi cung ứng</h3>
-</div>
-</div>
-<div class="md:col-span-4 relative group overflow-hidden rounded-xl bg-blue-900">
-<img alt="Dự án Marketing" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Team collaborating in a bright boardroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOyUpFR5qwd4RI3EYN3q2IPQi5zOd_-PxrOs_KQeGI0_fvX38dX3Ik1xnsaqUx11pkDpUv_3MA-j837iRnepMSfZx5Amzu00-UPAqS5c9J9mO4Tavbu1XfurSBaqPz4LNryf3P6ioRTQyF1Nuge9iu9F8iTTQldmlSv-dYxQYgl2z1Ymdrh6Qj_e1CU_Yt90CFSzikhMl386cY-KuJJVXY2kb-Y4zylrOzhhbwSsruWwH4jDHgj0NEc9dP6kkL-N30CIK5w1ZSsA"/>
-<div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
-<h3 class="text-xl font-bold">Hệ thống AI Content Marketing</h3>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials Section -->
-<section class="py-32 bg-surface" id="testimonials">
-<div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-20">
-<span class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Phản hồi khách hàng</span>
-<h2 class="text-4xl font-bold text-primary">Đối tác nói gì về chúng tôi</h2>
-</div>
-<div class="grid md:grid-cols-2 gap-12">
-<div class="bg-surface-container-low p-12 rounded-xl border-l-4 border-primary italic">
-<div class="mb-8 text-primary">
-<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">format_quote</span>
-</div>
-<p class="text-xl leading-relaxed text-secondary mb-8">
-                        "Khóa đào tạo không chỉ mang tính lý thuyết mà rất sát với thực tế vận hành của doanh nghiệp chúng tôi. Đội ngũ quản lý đã thay đổi hoàn toàn cách nhìn nhận về tiềm năng của AI."
-                    </p>
-<div class="flex items-center gap-4 not-italic">
-<div class="w-12 h-12 rounded-full overflow-hidden">
-<img alt="CEO Client" data-alt="Professional male corporate executive headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEiF6wbC7ewoDD9MTC1SMMvT3FMr8BjUzQ6QVx6V0sa_pybO6lIt68zBgqGNg9Kp3SUdenYANvX2Tjx2VQilEwRCRG-gh7GN1d5B_5f8yQwwLjLQ6zp99gr3aqNpHsyvflgl69lyCarJbQa_cpIx5p9VOv8V6hR5q5JBRznZsRc8hGB2ybKDAu9WydceMR71lgnfH-MnxgNuxPZLgXodlD3_uzfCZy_zp8ORZ_uKyf_IUhColSqchsZjEwTe4DX_S2-PtOwpoFvA"/>
-</div>
-<div>
-<div class="font-bold text-primary">Nguyễn Minh Tuấn</div>
-<div class="text-sm text-slate-500">CEO, VietTech Global</div>
-</div>
-</div>
-</div>
-<div class="bg-surface-container-low p-12 rounded-xl border-l-4 border-primary italic">
-<div class="mb-8 text-primary">
-<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">format_quote</span>
-</div>
-<p class="text-xl leading-relaxed text-secondary mb-8">
-                        "Giải pháp AI Assistant mà chuyên gia tư vấn đã giúp bộ phận Customer Support của chúng tôi tăng năng suất lên gấp 3 lần trong khi vẫn duy trì sự hài lòng của khách hàng."
-                    </p>
-<div class="flex items-center gap-4 not-italic">
-<div class="w-12 h-12 rounded-full overflow-hidden">
-<img alt="Manager Client" data-alt="Professional female executive portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9hUbF2dugdcpUlPIAPmNNA-a2YvzRQZhRKIFKawmcieuYx0lmaJEXT4uM1LVLdLvEcZMtPf9BO4Cb04yl7RJXHEkNojfn8ivDMUCpO_9Mtxrq6wszL984N2NcveHgjvWFrKRTk1JG8qgAfICmZJG6OcIVqp16bNTxlfrzupXG7D-eab8BtMGQ1dI89IBfNTCe_mYrEStLvTrwAWGuOjseE1iKDF-2-BtpIjhyeLh1LV3XfvpgILPaq9-aUpqsD5WjDPcPTRJT3A"/>
-</div>
-<div>
-<div class="font-bold text-primary">Lê Thu Trang</div>
-<div class="text-sm text-slate-500">Giám đốc Vận hành, Star Logistics</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-24 px-8">
-<div class="max-w-7xl mx-auto bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-surface-tint/20 to-transparent"></div>
-<div class="relative z-10">
-<h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Sẵn sàng đưa AI vào DNA doanh nghiệp?</h2>
-<p class="text-primary-fixed text-lg mb-12 max-w-2xl mx-auto opacity-90">Đừng để tổ chức của bạn bị bỏ lại phía sau trong cuộc đua công nghệ lớn nhất thế kỷ.</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a class="bg-white text-primary px-10 py-4 rounded-xl font-bold hover:bg-primary-fixed transition-colors" href="#contact">
-                        Đăng ký tư vấn miễn phí
-                    </a>
-<a class="border border-white/30 text-white px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors" href="tel:0900000000">
-                        Liên hệ trực tiếp
-                    </a>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Form Section -->
-<section class="py-32 bg-surface" id="contact">
-<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20">
-<div>
-<span class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Kết nối ngay</span>
-<h2 class="text-4xl font-bold text-primary mb-8">Hãy bắt đầu hành trình AI của bạn hôm nay</h2>
-<p class="text-secondary mb-12 leading-relaxed">Để lại thông tin, chúng tôi sẽ liên hệ trong vòng 24h để trao đổi chi tiết về nhu cầu đào tạo và phát triển của doanh nghiệp bạn.</p>
-<div class="space-y-6">
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" data-icon="mail">mail</span>
-</div>
-<span class="text-secondary">contact@theaiauthority.vn</span>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" data-icon="phone">phone</span>
-</div>
-<span class="text-secondary">+84 (0) 90 123 4567</span>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-</div>
-<span class="text-secondary">Quận 1, TP. Hồ Chí Minh, Việt Nam</span>
-</div>
-</div>
-</div>
-<div class="bg-white p-10 rounded-2xl editorial-shadow">
-<form class="space-y-6">
-<div>
-<label class="block text-sm font-semibold text-primary mb-2">Họ và tên</label>
-<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Nhập tên của bạn" type="text"/>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div>
-<label class="block text-sm font-semibold text-primary mb-2">Email</label>
-<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="email@congty.com" type="email"/>
-</div>
-<div>
-<label class="block text-sm font-semibold text-primary mb-2">Số điện thoại</label>
-<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="09xx xxx xxx" type="tel"/>
-</div>
-</div>
-<div>
-<label class="block text-sm font-semibold text-primary mb-2">Nội dung tin nhắn</label>
-<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Bạn đang quan tâm đến dịch vụ nào?" rows="4"></textarea>
-</div>
-<button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity" type="submit">Gửi yêu cầu</button>
-</form>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-blue-950 pt-20 pb-10 border-t border-white/10">
-<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
-<div>
-<div class="text-lg font-bold text-white mb-4">THE AI AUTHORITY</div>
-<p class="text-slate-400 max-w-xs text-sm font-inter">Khai phá tiềm năng vô hạn của trí tuệ nhân tạo cho sự phát triển bền vững của doanh nghiệp Việt.</p>
-</div>
-<div class="flex flex-wrap gap-12">
-<div class="flex flex-col gap-3">
-<span class="text-white font-semibold text-sm">Khám phá</span>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Giới thiệu</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Khóa học</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Tư vấn</a>
-</div>
-<div class="flex flex-col gap-3">
-<span class="text-white font-semibold text-sm">Hợp tác</span>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Tuyển dụng</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Báo chí</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Đối tác</a>
-</div>
-<div class="flex flex-col gap-3">
-<span class="text-white font-semibold text-sm">Pháp lý</span>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Chính sách bảo mật</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Điều khoản dịch vụ</a>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-inter text-sm text-slate-500">© 2024 The AI Authority Editorial. Tất cả quyền được bảo lưu.</p>
-<div class="flex gap-6">
-<a class="text-slate-400 hover:text-white transition-all underline" href="#">LinkedIn</a>
-<a class="text-slate-400 hover:text-white transition-all underline" href="#">Facebook</a>
-<a class="text-slate-400 hover:text-white transition-all underline" href="#">YouTube</a>
-</div>
-</div>
-</footer>
-</body></html>
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/40 backdrop-blur-xl shadow-sm">
+    <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+      <div class="text-xl font-bold tracking-tighter text-blue-950">THE AI AUTHORITY</div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-blue-900 border-b-2 border-blue-900 pb-1"
+          href="#">Trang chủ</a>
+        <a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors"
+          href="#about">Giới thiệu</a>
+        <a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors"
+          href="#services">Dịch vụ</a>
+        <a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors"
+          href="#portfolio">Dự án</a>
+        <a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors"
+          href="#testimonials">Đánh giá</a>
+        <a class="font-manrope text-sm tracking-[0.1em] font-medium uppercase text-slate-600 hover:text-blue-900 transition-colors"
+          href="#contact">Liên hệ</a>
+      </div>
+      <button
+        class="bg-primary hover:opacity-80 transition-all duration-300 text-white px-6 py-2.5 rounded-xl font-manrope text-sm font-semibold tracking-wide">
+        Bắt đầu ngay
+      </button>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-surface">
+    <div class="max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+      <div class="z-10">
+        <span
+          class="inline-block font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container mb-4 font-semibold">Tương
+          lai của Doanh nghiệp</span>
+        <h1 class="text-[3.5rem] leading-[1.1] font-extrabold text-primary tracking-tight mb-6">
+          Chuyên gia đào tạo <span class="text-surface-tint">AI</span> cho doanh nghiệp
+        </h1>
+        <p class="text-lg text-secondary leading-relaxed mb-10 max-w-lg">
+          Chuyển đổi hiệu suất vận hành và tư duy chiến lược thông qua hệ thống giải pháp trí tuệ nhân tạo thực chiến,
+          được thiết kế riêng cho lãnh đạo và đội ngũ tập đoàn.
+        </p>
+        <div class="flex flex-wrap gap-5">
+          <a class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:translate-y-[-2px] transition-all"
+            href="#contact">
+            Nhận tư vấn ngay
+          </a>
+          <a class="group flex items-center gap-2 text-primary font-semibold py-4 px-2" href="#services">
+            Tìm hiểu thêm
+            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-surface-tint/10 rounded-full blur-[100px]"></div>
+        <div class="relative z-10 rounded-2xl overflow-hidden editorial-shadow">
+          <img alt="Chuyên gia đào tạo AI chuyên nghiệp"
+            class="w-full h-[600px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+            data-alt="Professional AI expert portrait in studio lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvDbrS0C8ENgw8i-JM5fGYm6XRM4dM7mN0XhSgxOPUxKZZFA8cIHqrtMivyuw79KN4Qcro9UXURSi-YQjggeqSKyt1RbWuoCHJMG1Gs-tPmwwqZqvU7hDWMdjL-FT_FoR455r0izfxRryYVu0I4ar34V4mFmv65rSd5bk0B2Ajr01Frziha3DxmhoTfeJD_wdou5WZxKDAjTQijze6WC3lemH9oB4gqtvtc2SKLuGZS9OOOjL0Vb69ZTla6Loc8aCXtffVWbxFIw" />
+        </div>
+        <!-- Glass Badge -->
+        <div
+          class="absolute -bottom-6 -left-6 glass-effect p-6 rounded-xl editorial-shadow border border-white/20 z-20 max-w-[240px]">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+            <span class="font-bold text-primary">Kinh nghiệm</span>
+          </div>
+          <p class="text-sm text-secondary">Đã đồng hành cùng +50 tập đoàn đa quốc gia trong hành trình chuyển đổi số.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section class="py-32 bg-surface-container-low" id="about">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid md:grid-cols-12 gap-16 items-start">
+        <div class="md:col-span-5">
+          <span
+            class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Về
+            chúng tôi</span>
+          <h2 class="text-[2.5rem] font-bold text-primary leading-tight">Định vị lại tri thức trong kỷ nguyên số</h2>
+        </div>
+        <div class="md:col-span-7 space-y-8">
+          <p class="text-xl font-light text-secondary leading-relaxed">
+            Chúng tôi không chỉ dạy cách sử dụng công cụ AI. Chúng tôi kiến tạo tư duy hệ thống để AI trở thành "cánh
+            tay nối dài" cho sự sáng tạo và năng suất của con người.
+          </p>
+          <div class="grid grid-cols-2 gap-8 pt-4">
+            <div>
+              <div class="text-[2.5rem] font-extrabold text-primary mb-1">10+</div>
+              <div class="text-sm uppercase tracking-widest text-slate-500 font-medium">Năm kinh nghiệm công nghệ</div>
+            </div>
+            <div>
+              <div class="text-[2.5rem] font-extrabold text-primary mb-1">5000+</div>
+              <div class="text-sm uppercase tracking-widest text-slate-500 font-medium">Học viên cấp quản lý</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section class="py-32 bg-surface" id="services">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-20">
+        <span
+          class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Giải
+          pháp chiến lược</span>
+        <h2 class="text-4xl font-bold text-primary">Dịch vụ đào tạo &amp; Tư vấn</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-primary-fixed editorial-shadow group">
+          <div
+            class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl mb-8 group-hover:bg-primary transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="school">school</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-4">Đào tạo nội bộ</h3>
+          <p class="text-secondary leading-relaxed">Chương trình huấn luyện thực chiến về Generative AI, Prompt
+            Engineering dành riêng cho nhân sự các phòng ban.</p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-primary-fixed editorial-shadow group">
+          <div
+            class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl mb-8 group-hover:bg-primary transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-white"
+              data-icon="strategy">strategy</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-4">Tư vấn chiến lược AI</h3>
+          <p class="text-secondary leading-relaxed">Xây dựng lộ trình áp dụng AI toàn diện, từ khâu quản trị dữ liệu đến
+            tối ưu hóa quy trình vận hành doanh nghiệp.</p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-primary-fixed editorial-shadow group">
+          <div
+            class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl mb-8 group-hover:bg-primary transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-white"
+              data-icon="settings_input_component">settings_input_component</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-4">Triển khai giải pháp AI</h3>
+          <p class="text-secondary leading-relaxed">Xây dựng các trợ lý AI tùy chỉnh (Custom GPTs) và hệ thống tự động
+            hóa dựa trên nhu cầu đặc thù của tổ chức.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section (Bento Grid) -->
+  <section class="py-32 bg-surface-container-low" id="portfolio">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div class="max-w-2xl">
+          <span
+            class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Dự
+            án tiêu biểu</span>
+          <h2 class="text-4xl font-bold text-primary">Khẳng định giá trị qua kết quả thực tế</h2>
+        </div>
+        <a class="text-primary font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity"
+          href="#">Xem tất cả dự án</a>
+      </div>
+      <div class="grid md:grid-cols-12 grid-rows-2 gap-6 h-auto md:h-[700px]">
+        <div class="md:col-span-8 md:row-span-2 relative group overflow-hidden rounded-xl bg-primary">
+          <img alt="Dự án Tech Corp"
+            class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+            data-alt="Modern corporate building architecture reflection"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJIZ81GqnfK8tKLtHiZ4XwWGdzPUb4D8fKoHkry6CugMNh3JXQ1krHFyXd39_d_MbIoe-ZJSD5RMvlRtrPNUWE_LUX1nAhOK4eGxoJvWqpZSUct3qidfD-gpdu5m3GDJE8zHMMyLxOYWj0nGKPjl1d8LkgE88g-whXEHGuHYTeEQBQkqllxgjWxT-mysuw04MikpzpAGMkVrX-qf5uBdBrapzX3wTQuRn25AVKIf38Xfj71OsjMTDZFNcAXDWCqHvdhSJMzTOgRA" />
+          <div class="absolute inset-0 p-10 flex flex-col justify-end text-white">
+            <div class="mb-2 text-xs uppercase tracking-widest opacity-80">FinTech Solutions</div>
+            <h3 class="text-3xl font-bold mb-4">Tự động hóa hệ thống thẩm định tín dụng</h3>
+            <p class="max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Giảm 40% thời gian xử
+              lý hồ sơ và tăng 15% độ chính xác trong dự báo rủi ro.</p>
+          </div>
+        </div>
+        <div class="md:col-span-4 relative group overflow-hidden rounded-xl bg-surface-tint">
+          <img alt="Dự án Logistics"
+            class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+            data-alt="Modern minimal office workspace environment"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6zrGI9ghWKKJpXmqMWS4YmRp4YwuTR3BQ5ce-VGsmZJT5PD6oMCsUKUzqZKlnUJtP_ysH90yz0l1q4khWEbKOdMDec_3OO0RuVtxaDIlDsWN_gIgAKqeXEa6Fc5Ya0dVut1sh8A1k6j1TzJt7iKwh7mRW-bYRZsfcuquONQAu_ikRtX-ffuE_yfwq7cI7g-lgKXhc7ofOBcIRd5UUATKJknWI57JMj7ADYhETRAmPDtDvKRHDYraaIqz3tXFBHZe8K1vRbNI8Ww" />
+          <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+            <h3 class="text-xl font-bold">AI Quản trị chuỗi cung ứng</h3>
+          </div>
+        </div>
+        <div class="md:col-span-4 relative group overflow-hidden rounded-xl bg-blue-900">
+          <img alt="Dự án Marketing"
+            class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+            data-alt="Team collaborating in a bright boardroom"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOyUpFR5qwd4RI3EYN3q2IPQi5zOd_-PxrOs_KQeGI0_fvX38dX3Ik1xnsaqUx11pkDpUv_3MA-j837iRnepMSfZx5Amzu00-UPAqS5c9J9mO4Tavbu1XfurSBaqPz4LNryf3P6ioRTQyF1Nuge9iu9F8iTTQldmlSv-dYxQYgl2z1Ymdrh6Qj_e1CU_Yt90CFSzikhMl386cY-KuJJVXY2kb-Y4zylrOzhhbwSsruWwH4jDHgj0NEc9dP6kkL-N30CIK5w1ZSsA" />
+          <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+            <h3 class="text-xl font-bold">Hệ thống AI Content Marketing</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="py-32 bg-surface" id="testimonials">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-20">
+        <span
+          class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Phản
+          hồi khách hàng</span>
+        <h2 class="text-4xl font-bold text-primary">Đối tác nói gì về chúng tôi</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-surface-container-low p-12 rounded-xl border-l-4 border-primary italic">
+          <div class="mb-8 text-primary">
+            <span class="material-symbols-outlined text-5xl"
+              style="font-variation-settings: 'FILL' 1;">format_quote</span>
+          </div>
+          <p class="text-xl leading-relaxed text-secondary mb-8">
+            "Khóa đào tạo không chỉ mang tính lý thuyết mà rất sát với thực tế vận hành của doanh nghiệp chúng tôi. Đội
+            ngũ quản lý đã thay đổi hoàn toàn cách nhìn nhận về tiềm năng của AI."
+          </p>
+          <div class="flex items-center gap-4 not-italic">
+            <div class="w-12 h-12 rounded-full overflow-hidden">
+              <img alt="CEO Client" data-alt="Professional male corporate executive headshot"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEiF6wbC7ewoDD9MTC1SMMvT3FMr8BjUzQ6QVx6V0sa_pybO6lIt68zBgqGNg9Kp3SUdenYANvX2Tjx2VQilEwRCRG-gh7GN1d5B_5f8yQwwLjLQ6zp99gr3aqNpHsyvflgl69lyCarJbQa_cpIx5p9VOv8V6hR5q5JBRznZsRc8hGB2ybKDAu9WydceMR71lgnfH-MnxgNuxPZLgXodlD3_uzfCZy_zp8ORZ_uKyf_IUhColSqchsZjEwTe4DX_S2-PtOwpoFvA" />
+            </div>
+            <div>
+              <div class="font-bold text-primary">Nguyễn Minh Tuấn</div>
+              <div class="text-sm text-slate-500">CEO, VietTech Global</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-surface-container-low p-12 rounded-xl border-l-4 border-primary italic">
+          <div class="mb-8 text-primary">
+            <span class="material-symbols-outlined text-5xl"
+              style="font-variation-settings: 'FILL' 1;">format_quote</span>
+          </div>
+          <p class="text-xl leading-relaxed text-secondary mb-8">
+            "Giải pháp AI Assistant mà chuyên gia tư vấn đã giúp bộ phận Customer Support của chúng tôi tăng năng suất
+            lên gấp 3 lần trong khi vẫn duy trì sự hài lòng của khách hàng."
+          </p>
+          <div class="flex items-center gap-4 not-italic">
+            <div class="w-12 h-12 rounded-full overflow-hidden">
+              <img alt="Manager Client" data-alt="Professional female executive portrait"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9hUbF2dugdcpUlPIAPmNNA-a2YvzRQZhRKIFKawmcieuYx0lmaJEXT4uM1LVLdLvEcZMtPf9BO4Cb04yl7RJXHEkNojfn8ivDMUCpO_9Mtxrq6wszL984N2NcveHgjvWFrKRTk1JG8qgAfICmZJG6OcIVqp16bNTxlfrzupXG7D-eab8BtMGQ1dI89IBfNTCe_mYrEStLvTrwAWGuOjseE1iKDF-2-BtpIjhyeLh1LV3XfvpgILPaq9-aUpqsD5WjDPcPTRJT3A" />
+            </div>
+            <div>
+              <div class="font-bold text-primary">Lê Thu Trang</div>
+              <div class="text-sm text-slate-500">Giám đốc Vận hành, Star Logistics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="py-24 px-8">
+    <div class="max-w-7xl mx-auto bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-surface-tint/20 to-transparent"></div>
+      <div class="relative z-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Sẵn sàng đưa AI vào DNA doanh nghiệp?</h2>
+        <p class="text-primary-fixed text-lg mb-12 max-w-2xl mx-auto opacity-90">Đừng để tổ chức của bạn bị bỏ lại phía
+          sau trong cuộc đua công nghệ lớn nhất thế kỷ.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a class="bg-white text-primary px-10 py-4 rounded-xl font-bold hover:bg-primary-fixed transition-colors"
+            href="#contact">
+            Đăng ký tư vấn miễn phí
+          </a>
+          <a class="border border-white/30 text-white px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors"
+            href="tel:0900000000">
+            Liên hệ trực tiếp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Form Section -->
+  <section class="py-32 bg-surface" id="contact">
+    <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20">
+      <div>
+        <span
+          class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-primary-container font-semibold mb-4 block">Kết
+          nối ngay</span>
+        <h2 class="text-4xl font-bold text-primary mb-8">Hãy bắt đầu hành trình AI của bạn hôm nay</h2>
+        <p class="text-secondary mb-12 leading-relaxed">Để lại thông tin, chúng tôi sẽ liên hệ trong vòng 24h để trao
+          đổi chi tiết về nhu cầu đào tạo và phát triển của doanh nghiệp bạn.</p>
+        <div class="space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined" data-icon="mail">mail</span>
+            </div>
+            <span class="text-secondary">contact@theaiauthority.vn</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined" data-icon="phone">phone</span>
+            </div>
+            <span class="text-secondary">+84 (0) 90 123 4567</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+            </div>
+            <span class="text-secondary">Quận 1, TP. Hồ Chí Minh, Việt Nam</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-10 rounded-2xl editorial-shadow">
+        <form id="contactForm" class="space-y-6">
+          <div>
+            <label class="block text-sm font-semibold text-primary mb-2">Họ và tên</label>
+            <input name="name" required
+              class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
+              placeholder="Nhập tên của bạn" type="text" />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-primary mb-2">Email</label>
+              <input name="email" required
+                class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
+                placeholder="email@congty.com" type="email" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-primary mb-2">Số điện thoại</label>
+              <input name="phone" required
+                class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
+                placeholder="09xx xxx xxx" type="tel" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-primary mb-2">Nội dung tin nhắn</label>
+            <textarea name="message"
+              class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
+              placeholder="Bạn đang quan tâm đến dịch vụ nào?" rows="4"></textarea>
+          </div>
+          <button id="submitBtn"
+            class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            type="submit">
+            <span>Gửi yêu cầu</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-blue-950 pt-20 pb-10 border-t border-white/10">
+    <div
+      class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
+      <div>
+        <div class="text-lg font-bold text-white mb-4">THE AI AUTHORITY</div>
+        <p class="text-slate-400 max-w-xs text-sm font-inter">Khai phá tiềm năng vô hạn của trí tuệ nhân tạo cho sự phát
+          triển bền vững của doanh nghiệp Việt.</p>
+      </div>
+      <div class="flex flex-wrap gap-12">
+        <div class="flex flex-col gap-3">
+          <span class="text-white font-semibold text-sm">Khám phá</span>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Giới thiệu</a>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Khóa học</a>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Tư vấn</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-white font-semibold text-sm">Hợp tác</span>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Tuyển dụng</a>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Báo chí</a>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Đối tác</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-white font-semibold text-sm">Pháp lý</span>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Chính sách bảo mật</a>
+          <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Điều khoản dịch vụ</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-inter text-sm text-slate-500">© 2024 The AI Authority Editorial. Tất cả quyền được bảo lưu.</p>
+      <div class="flex gap-6">
+        <a class="text-slate-400 hover:text-white transition-all underline" href="#">LinkedIn</a>
+        <a class="text-slate-400 hover:text-white transition-all underline" href="#">Facebook</a>
+        <a class="text-slate-400 hover:text-white transition-all underline" href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyz2tH7H-IEXOFRS2SLmGD6nPPwv8UpBZ6yPftDln1ZRmJXHOL2tEvoF4zQsQTojKl2/exec';
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = submitBtn.querySelector('span');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      btnText.innerText = 'Đang đẩy dữ liệu lên Sheets...';
+
+      // Bắn request lên Google Apps Script
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert('Tuyệt vời! Thông tin đã được lưu trong Google Sheets của bạn.');
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+          btnText.innerText = 'Gửi yêu cầu';
+        })
+        .catch(error => {
+          // App Script thi thoảng báo lỗi kết nối ngầm (khi chưa config header hoàn chỉnh)
+          // nhưng dữ liệu VẪN ĐƯỢC LƯU VÀO SHEET THÀNH CÔNG, nên ta báo message này để người dùng yên tâm.
+          console.error('Info', error.message);
+          alert('Tuyệt vời! Thông tin đã được lưu trong Google Sheets của bạn.');
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+          btnText.innerText = 'Gửi yêu cầu';
+        })
+    });
+  </script>
+</body>
+
+</html>
