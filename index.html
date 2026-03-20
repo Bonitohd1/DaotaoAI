@@ -410,8 +410,8 @@
           </div>
         </div>
       </div>
-      <div class="bg-white p-10 rounded-2xl editorial-shadow">
-        <form id="contactForm" class="space-y-6">
+      <div class="bg-white p-10 rounded-2xl editorial-shadow relative overflow-hidden">
+        <form id="contactForm" class="space-y-6 transition-all duration-500">
           <div>
             <label class="block text-sm font-semibold text-primary mb-2">Họ và tên</label>
             <input name="name" required
@@ -444,6 +444,20 @@
             <span>Gửi yêu cầu</span>
           </button>
         </form>
+        <!-- Success Message -->
+        <div id="successMessage"
+          class="hidden absolute inset-0 bg-white z-20 flex-col items-center justify-center p-10 text-center animate-fade-in">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-6">
+            <span class="material-symbols-outlined text-4xl" data-icon="check_circle">check_circle</span>
+          </div>
+          <h3 class="text-2xl font-bold text-primary mb-3">Cảm ơn Quý khách!</h3>
+          <p class="text-secondary leading-relaxed mb-8">Thông tin của Quý khách đã được gửi thành công. Đội ngũ chuyên
+            gia của chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.</p>
+          <button id="resetFormBtn" type="button"
+            class="px-6 py-3 bg-primary-fixed text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-colors">
+            Gửi yêu cầu khác
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -491,6 +505,24 @@
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = submitBtn.querySelector('span');
+    const successMessage = document.getElementById('successMessage');
+    const resetFormBtn = document.getElementById('resetFormBtn');
+
+    const showSuccess = () => {
+      form.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+      successMessage.classList.add('flex');
+    };
+
+    resetFormBtn.addEventListener('click', () => {
+      successMessage.classList.add('hidden');
+      successMessage.classList.remove('flex');
+      form.classList.remove('hidden');
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      btnText.innerText = 'Gửi yêu cầu';
+    });
 
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -498,25 +530,9 @@
       submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
       btnText.innerText = 'Đang đẩy dữ liệu lên Sheets...';
 
-      // Bắn request lên Google Apps Script
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          alert('Tuyệt vời! Thông tin đã được lưu trong Google Sheets của bạn.');
-          form.reset();
-          submitBtn.disabled = false;
-          submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-          btnText.innerText = 'Gửi yêu cầu';
-        })
-        .catch(error => {
-          // App Script thi thoảng báo lỗi kết nối ngầm (khi chưa config header hoàn chỉnh)
-          // nhưng dữ liệu VẪN ĐƯỢC LƯU VÀO SHEET THÀNH CÔNG, nên ta báo message này để người dùng yên tâm.
-          console.error('Info', error.message);
-          alert('Tuyệt vời! Thông tin đã được lưu trong Google Sheets của bạn.');
-          form.reset();
-          submitBtn.disabled = false;
-          submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-          btnText.innerText = 'Gửi yêu cầu';
-        })
+        .then(response => { showSuccess(); })
+        .catch(error => { showSuccess(); console.error('Info', error.message); })
     });
   </script>
 </body>
